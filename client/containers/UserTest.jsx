@@ -13,7 +13,7 @@ import Instructions from "../components/Instructions.jsx";
 import Container from "@material-ui/core/Container";
 // import UserResults from "./UserResults";
 
-const Fallback = () => <p> Please wait while we boot up skynet! </p>;
+const Fallback = () => (<p> Please wait while we boot up skynet! </p>);
 const LazyWorkingMemory = lazy(() => import("./WM"));
 const LazyImageRecognition = lazy(() => import("./IR"));
 const LazyUserDemographics = lazy(() => import("./Demographics"));
