@@ -12,8 +12,11 @@ module.exports = {
   entry: path.resolve(__dirname, 'client/index.jsx'),
   output: {
     path: path.resolve(__dirname, 'client/dist'),
+    chunkFilename: 'chunk-[name].[contenthash].js',
     publicPath: '/',
-    filename: 'bundle.js',
+    // filename: 'bundle.js',
+    
+    // publicPath: "/assets/dist/"
   },
   module: {
     rules: [
@@ -78,6 +81,7 @@ module.exports = {
     new webpack.optimize.AggressiveMergingPlugin(),
     new CompressionPlugin(),
   ],
+  
   devServer: {
     contentBase: '/',
     publicPath: '/',
